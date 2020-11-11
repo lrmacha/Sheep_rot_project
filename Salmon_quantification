@@ -1,0 +1,8 @@
+Install Salmon in Salmon environment
+Sudo apt install salmon
+
+mkdir file_1
+mv dir file_1
+#copy index file and file_R1_trim.fastq.gz and file_R2_trim.fastq.gz
+
+salmon quant -i Ovis_aries_v3.1.cdna.all_index -l A \  -1 file_R1_trim.fastq.gz  -2 file_R2_trim.fastq.gz  -p 8 --validateMappings --output file_quant 

@@ -1,0 +1,8 @@
+Sudo apt install Fastp
+
+#Using fastp to trim illumina reads
+fastp -i file_R1.fastq.gz -I file_R2_001.fastq.gz -o file1_R1_001_trim.fastq.gz -O file_R2_001_trim.fastq.gz -f 10 -t 10 -F 10 -T 10 -p -q 38 -u 40 -n 5 -L -l 70 --length_limit 200 --poly_g_min_len 10 -x --poly_x_min_len 10
+
+#Repeated for other paired seq files
+
+#placed trimmed files into /mnt/c/MRes/original/trimmed folder and move to this folder

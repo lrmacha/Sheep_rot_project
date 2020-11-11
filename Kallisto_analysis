@@ -1,0 +1,7 @@
+#Create index file
+kallisto index Ovis_aries.Oar_v3.1.cdna.all.fa.gz  -i, --index=STRING
+
+
+# Quantify RNA abundance
+kallisto quant -i STRING -o output file_R1_001_trim.fastq.gz file_R2_001_trim.fastq.gz
+

@@ -1,3 +1,6 @@
+#install Kallisto 
+Sudo apt install Kallisto
+
 #Create index file
 kallisto index Ovis_aries.Oar_v3.1.cdna.all.fa.gz  -i, --index=STRING
 

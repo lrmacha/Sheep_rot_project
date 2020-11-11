@@ -1,0 +1,16 @@
+#install conda
+sudo apt install conda
+
+#check conda is installed
+conda info
+
+
+#Create environment for Salmon
+conda create --name Salmon
+
+#confirm salmon environment has been created
+conda env list
+
+#Activate the new environment to use it
+conda activate salmon
+

@@ -1,1 +1,31 @@
+#get fastQC
+sudo apt install fastqc
+sudo apt update
 
+#Checking quality with fastqc 
+fastqc file_R1.fastq.gz
+fastqc file_R2.fastq.gz
+
+# or use script below
+
+#!/bin/bash
+# to run the file, make a directory containing your indexed transcriptome and all of the paired end data (fastq files) then you run it in terminal using ./bash_wrapper.sh
+# here is where you set what files you want the bash script to use (the fastq files) and set the variable (fq_pair1) you have a wild card (*) which means look for every file which ends with fastq.gz (edit accordingly) in the directory
+
+for fq_pair_1 in *.fastq.gz;
+
+do
+
+# here is where you set the second variable (fq_pair2) for the pair end file, read 2.
+
+	fq_pair_2="${fq_pair_1%1.fastq.gz}2.fastq.gz";
+
+ #the next line is the command you want to run, so in this case the fastqc commands. Instead of adding the file names you add the variables with a $ sign to invoke the files you set in the variable. Using the variable name to create an output directory you won't overwrite data on the next pass through
+
+    fastqc $fq_pair_1 $fq_pair_2
+
+	
+done
+wait;
+
+exit

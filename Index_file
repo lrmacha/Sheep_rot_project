@@ -1,0 +1,5 @@
+#created an index folder and download reference transcriptome file into it 
+Ovis_aries.Oar_v3.1.cdna.all.fa.gz
+
+
+salmon index -t Ovis_aries.Oar_v3.1.cdna.all.fa.gz -i Ovis_aries_v3.1.cdna.all_index
